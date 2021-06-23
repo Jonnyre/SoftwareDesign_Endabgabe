@@ -1,17 +1,19 @@
 [
   {
-    "_title": "test"
-  },
-  {
-    "_title": "test3"
-  },
-  {
-    "_title": "test4"
-  },
-  {
-    "_title": "test2"
-  },
-  {
-    "_title": "emma"
+    "_title": "Test",
+    "_x": 2,
+    "_y": 2,
+    "_map": [
+      { "_y": 1, "_x": 1, "_title": "Paris" },
+      { "_y": 1, "_x": 2, "_title": "Moskau" },
+      { "_y": 2, "_x": 1, "_title": "Rom" },
+      { "_y": 2, "_x": 2, "_title": "Berlin" }
+    ],
+    "_startX": 2,
+    "_startY": 2,
+    "_textAdventureId": "f5adf508-eaa6-49df-a305-ecc7ae3dbf53",
+    "_creatorUserId": "791cf1bf-a53a-4b7c-877b-45e0acfc5461",
+    "_playCounter": 2,
+    "_turnCounter": 4
   }
 ]
