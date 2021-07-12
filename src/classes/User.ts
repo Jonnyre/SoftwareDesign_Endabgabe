@@ -11,8 +11,3 @@ export class User extends AbstractUser {
     }
 
 }
-
-export enum UserState {
-    NOTLOGGEDIN = 0,  
-    LOGGEDIN = 1
-}

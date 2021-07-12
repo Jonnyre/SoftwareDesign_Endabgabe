@@ -10,27 +10,27 @@ export class FileHandler {
     FileHandler._instance = this
   }
 
-  public static getInstance() : FileHandler {
+  public static GetInstance() : FileHandler {
     return FileHandler._instance;
   }
 
-  private readFile(pathToFile: string) : any {
+  private ReadFile(pathToFile: string) : any {
     let jsonRaw = fs.readFileSync(path.resolve(__dirname, "../"+pathToFile));
     let json : any = JSON.parse(jsonRaw.toString());
     return json;
   }
 
-  public readArrayFile(pathToFile: string) : Array<any> {
-    return this.readFile(pathToFile);
+  public ReadArrayFile(pathToFile: string) : Array<any> {
+    return this.ReadFile(pathToFile);
   }
 
-  public readObjectFile(pathToFile: string) : any {
-    return this.readFile(pathToFile);
+  public ReadObjectFile(pathToFile: string) : any {
+    return this.ReadFile(pathToFile);
   }
 
-  public writeFile(pathToFile: string, dataToWrite: any) : void {
+  public WriteFile(pathToFile: string, dataToWrite: any) : void {
     fs.writeFileSync(path.resolve(__dirname, "../" + pathToFile), JSON.stringify(dataToWrite));
   }
 }
 
-export default FileHandler.getInstance();
+export default FileHandler.GetInstance();

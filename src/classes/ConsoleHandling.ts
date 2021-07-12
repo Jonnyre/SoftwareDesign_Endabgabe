@@ -16,11 +16,11 @@ class ConsoleHandling {
     ConsoleHandling._instance = this
   }
 
-  public static getInstance() : ConsoleHandling {
+  public static GetInstance() : ConsoleHandling {
     return ConsoleHandling._instance
   }
 
-  public question(question: string) : Promise<string> {
+  public Question(question: string) : Promise<string> {
     return new Promise((resolve) => {
       this.consoleLine.question(question.toString(), (_answer: string) => {
         resolve(_answer);
@@ -28,7 +28,7 @@ class ConsoleHandling {
     });
   }
 
-  public showPossibilities(showPossibilities : string[], question: string) : Promise<string> {
+  public ShowPossibilities(showPossibilities : string[], question: string) : Promise<string> {
     this.consoleLine.write("\n")
     this.consoleLine.write("Functions you can use: ");
     this.consoleLine.write("\n\n");
@@ -43,14 +43,14 @@ class ConsoleHandling {
     }));
   }
 
-  public printInput(input: string) {
+  public PrintInput(input: string): void {
     this.consoleLine.write(input);
     this.consoleLine.write("\n");
   }
 
-  public closeConsole() {
+  public CloseConsole(): void {
     this.consoleLine.close();
   }
 }
 
-export default ConsoleHandling.getInstance();
+export default ConsoleHandling.GetInstance();
