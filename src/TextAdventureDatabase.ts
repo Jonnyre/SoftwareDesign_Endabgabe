@@ -193,7 +193,6 @@ export class TextAdventureDatabase {
     let password: string = await ConsoleHandling.Question("What is your password? ");
 
     let hash: string = bcrypt.hashSync(password, 10);
-    console.log(hash);
     let userId: string = v4();
     let newUserDao: UserDao = { _username: username, _password: hash, _userId: userId };
     let newUser: User = new User(newUserDao);
