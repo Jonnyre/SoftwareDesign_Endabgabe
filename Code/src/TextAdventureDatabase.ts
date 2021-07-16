@@ -58,8 +58,8 @@ export class TextAdventureDatabase {
     this.HandleLoggedInAnswer(answer);
   }
 
-  private async HandleLoggedInAnswer(answer: string): Promise<void> {
-    switch (answer) {
+  private async HandleLoggedInAnswer(_answer: string): Promise<void> {
+    switch (_answer) {
       case "1":
         await this.SearchTextAdventureByTitle();
         break;
@@ -83,8 +83,8 @@ export class TextAdventureDatabase {
     await this.GoNext();
   }
 
-  private async HandleAnswer(answer: string) {
-    switch (answer) {
+  private async HandleAnswer(_answer: string) {
+    switch (_answer) {
       case "1":
         await this.SearchTextAdventureByTitle();
         break;
@@ -150,7 +150,7 @@ export class TextAdventureDatabase {
         continue;
       }
 
-      if (!Number.isFinite(Number(answer)) || possibilites.length - 1 < Number(answer)) {
+      if (!Number.isFinite(Number(answer)) || possibilites.length - 1 + count < Number(answer)) {
         ConsoleHandling.PrintInput("Please enter a valid number.");
         continue;
       }

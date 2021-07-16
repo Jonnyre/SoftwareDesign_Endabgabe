@@ -17,22 +17,22 @@ export class AbstractUser {
       return this._username;
     }
   
-    public set username(value: string) {
-      this._username = value;
+    public set username(_value: string) {
+      this._username = _value;
     }
   
     public get password(): string {
       return this._password;
     }
-    public set password(value: string) {
-      this._password = value;
+    public set password(_value: string) {
+      this._password = _value;
     }
   
     public get userId(): string {
       return this._userId;
     }
   
-    public set userId(value: string) {
-      this._userId = value;
+    public set userId(_value: string) {
+      this._userId = _value;
     }
 }

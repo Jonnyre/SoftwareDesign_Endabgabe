@@ -14,87 +14,87 @@ export class TextAdventure {
     private _playCounter: number;
     private _turnCounter: number;
 
-    constructor(textadventureDao: TextAdventureDao) {
-        this._title = textadventureDao._title;
-        this._x = textadventureDao._x;
-        this._y = textadventureDao._y;
-        this._map = textadventureDao._map;
-        this._startX = textadventureDao._startX;
-        this._startY = textadventureDao._startY;
-        this._textAdventureId = textadventureDao._textAdventureId;
-        this._creatorUserId = textadventureDao._creatorUserId;
-        this._playCounter = textadventureDao._playCounter;
-        this._turnCounter = textadventureDao._turnCounter;
+    constructor(_textadventureDao: TextAdventureDao) {
+        this._title = _textadventureDao._title;
+        this._x = _textadventureDao._x;
+        this._y = _textadventureDao._y;
+        this._map = _textadventureDao._map;
+        this._startX = _textadventureDao._startX;
+        this._startY = _textadventureDao._startY;
+        this._textAdventureId = _textadventureDao._textAdventureId;
+        this._creatorUserId = _textadventureDao._creatorUserId;
+        this._playCounter = _textadventureDao._playCounter;
+        this._turnCounter = _textadventureDao._turnCounter;
     }
 
     public get title(): string {
         return this._title;
     }
-    public set title(value: string) {
-        this._title = value;
+    public set title(_value: string) {
+        this._title = _value;
     }
 
     public get x(): number {
         return this._x;
     }
-    public set x(value: number) {
-        this._x = value;
+    public set x(_value: number) {
+        this._x = _value;
     }
 
     public get y(): number {
         return this._y;
     }
-    public set y(value: number) {
-        this._y = value;
+    public set y(_value: number) {
+        this._y = _value;
     }
 
     public get map(): Location[] {
         return this._map;
     }
-    public set map(value: Location[]) {
-        this._map = value;
+    public set map(_value: Location[]) {
+        this._map = _value;
     }
 
     public get startX(): number {
         return this._startX;
     }
-    public set startX(value: number) {
-        this._startX = value;
+    public set startX(_value: number) {
+        this._startX = _value;
     }
 
     public get startY(): number {
         return this._startY;
     }
-    public set startY(value: number) {
-        this._startY = value;
+    public set startY(_value: number) {
+        this._startY = _value;
     }
 
     public get textAdventureId(): string {
         return this._textAdventureId;
     }
-    public set textAdventureId(value: string) {
-        this._textAdventureId = value;
+    public set textAdventureId(_value: string) {
+        this._textAdventureId = _value;
     }
 
     public get creatorUserId(): string {
         return this._creatorUserId;
     }
-    public set creatorUserId(value: string) {
-        this._creatorUserId = value;
+    public set creatorUserId(_value: string) {
+        this._creatorUserId = _value;
     }
 
     public get playCounter(): number {
         return this._playCounter;
     }
-    public set playCounter(value: number) {
-        this._playCounter = value;
+    public set playCounter(_value: number) {
+        this._playCounter = _value;
     }
 
     public get turnCounter(): number {
         return this._turnCounter;
     }
-    public set turnCounter(value: number) {
-        this._turnCounter = value;
+    public set turnCounter(_value: number) {
+        this._turnCounter = _value;
     }
 
     public async PlayTextAdventure(): Promise<void> {

@@ -20,31 +20,31 @@ class ConsoleHandling {
     return ConsoleHandling._instance
   }
 
-  public Question(question: string) : Promise<string> {
+  public Question(_question: string) : Promise<string> {
     return new Promise((resolve) => {
-      this.consoleLine.question(question.toString(), (_answer: string) => {
-        resolve(_answer);
+      this.consoleLine.question(_question.toString(), (answer: string) => {
+        resolve(answer);
       })
     });
   }
 
-  public ShowPossibilities(showPossibilities : string[], question: string) : Promise<string> {
+  public ShowPossibilities(_showPossibilities : string[], _question: string) : Promise<string> {
     this.consoleLine.write("\n")
     this.consoleLine.write("Functions you can use: ");
     this.consoleLine.write("\n\n");
-    for(let possibility of showPossibilities) {
+    for(let possibility of _showPossibilities) {
       this.consoleLine.write(possibility.toString());
       this.consoleLine.write("\n")
     }
     this.consoleLine.write("\n");
 
-    return new Promise((resolve) => this.consoleLine.question(question.toString(), (answer: string) => {
+    return new Promise((resolve) => this.consoleLine.question(_question.toString(), (answer: string) => {
       resolve(answer);
     }));
   }
 
-  public PrintInput(input: string): void {
-    this.consoleLine.write(input);
+  public PrintInput(_input: string): void {
+    this.consoleLine.write(_input);
     this.consoleLine.write("\n");
   }
 
